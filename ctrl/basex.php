@@ -71,11 +71,13 @@ class basex {
         $add->AddElement("shoestorage", $_POST['shoestorage']);
         $add->AddElement("shoenotice", $_POST['shoenotice']);
         $result = $add->getXml();
+        $result = str_replace('<?xml version="1.0"?>','',$result);
         $xml = new DOMDocument();
         $xml->loadXML($result);
+      // print_r($result);
         if ($xml->schemaValidate("schema.xsd")) {
             $this->basex->execute("open shoes");
-            $this->basex->add("shoes", $result);
+            $this->basex->add("shoe", $result);
         }
         include_once 'view/view_create_result.php';
     }

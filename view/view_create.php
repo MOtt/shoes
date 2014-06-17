@@ -80,7 +80,7 @@
     <label>Absatzhoehe (cm)</label><br />
         <select name="shoeheel" ref="shoeheel" required="required" >
             <option value=""></option>
-            <option value="0">0</option>
+            <option value="0.0">0</option>
             <option value="0.5">0.5</option>
             <option value="1">1</option>
             <option value="1.5">1.5</option>
