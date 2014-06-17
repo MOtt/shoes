@@ -11,6 +11,7 @@ Für die Installation wird folgendes benötigt:
 - Datenbank mit dem Namen 'shoes'
 - Webserver (z.B. XAMPP)
 - Applikation aus diesem Repo
-^
+
+
 Alle weiteren Angaben findet man auch in der Seminar-Arbeit 'Seminarbericht BaseX' welcher im Ordner Dokumentation abgelegt ist
 
