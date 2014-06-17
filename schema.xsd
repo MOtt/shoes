@@ -1,0 +1,132 @@
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    <xs:element name="shoe"  >
+
+        <xs:complexType >
+            	
+            <xs:sequence>
+               
+                <xs:element minOccurs="1" name="shoebrand" type="sbrand" />
+                <xs:element minOccurs="1" name="shoemodel" type="xs:string" />
+                <xs:element minOccurs="1" name="shoetype" type="stype" />
+                <xs:element minOccurs="1" name="shoecolor" type="scolor" />
+                <xs:element minOccurs="1" name="shoesize" type="ssize" />		
+                <xs:element minOccurs="1" name="shoeheel" type="sheel" />
+                <xs:element minOccurs="0" name="shoestorage" type="sstorage" />
+                <xs:element minOccurs="0" name="shoenotice" type="xs:string" />
+            </xs:sequence>
+            <xs:element name="shoeid" use = "required" >
+                <xs:simpleType>
+                    <xs:restriction base="xs:string" />                             
+                </xs:simpleType>
+            </xs:element>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="sbrand">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Aldo"/>
+            <xs:enumeration value="Adidas"/>
+            <xs:enumeration value="Airwalk"/>
+            <xs:enumeration value="Ben Sherman"/>
+            <xs:enumeration value="Benetton"/>
+            <xs:enumeration value="edc by esprit"/>
+            <xs:enumeration value="Etnies"/>
+            <xs:enumeration value="Hunter"/>
+            <xs:enumeration value="JOOP"/>
+            <xs:enumeration value="Kappa"/>
+            <xs:enumeration value="K-Swiss"/>
+            <xs:enumeration value="Louboutin"/>
+            <xs:enumeration value="Mexx"/>
+            <xs:enumeration value="Skechers"/>
+            <xs:enumeration value="Wrangler"/>
+        </xs:restriction>
+    </xs:simpleType>
+	
+    <xs:simpleType name="stype">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Badeschuhe"/>
+            <xs:enumeration value="Ballerinas"/>
+            <xs:enumeration value="Halbschuhe"/>
+            <xs:enumeration value="Hausschuhe"/>
+            <xs:enumeration value="High Heels"/>
+            <xs:enumeration value="Outdoor Schuhe"/>
+            <xs:enumeration value="Pantoletten"/>
+            <xs:enumeration value="Pumps"/>
+            <xs:enumeration value="Sandalen"/>
+            <xs:enumeration value="Schnuerschuhe"/>
+            <xs:enumeration value="Sneaker"/>
+            <xs:enumeration value="Sportschuhe"/>
+            <xs:enumeration value="Stiefel"/>
+            <xs:enumeration value="Stiefeletten"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="scolor">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Anthrazit"/>
+            <xs:enumeration value="Blau"/>
+            <xs:enumeration value="Gelb"/>
+            <xs:enumeration value="Grau"/>
+            <xs:enumeration value="Gruen"/>
+            <xs:enumeration value="Helblau"/>
+            <xs:enumeration value="Rosa"/>
+            <xs:enumeration value="Rot"/>
+            <xs:enumeration value="Schwarz"/>
+            <xs:enumeration value="Silber"/>
+            <xs:enumeration value="Weiss"/>
+        </xs:restriction>
+    </xs:simpleType>
+	
+    <xs:simpleType name="ssize">
+        <xs:restriction base="xs:integer">
+            <xs:enumeration value="37"/>
+            <xs:enumeration value="38"/>
+            <xs:enumeration value="39"/>
+            <xs:enumeration value="40"/>
+            <xs:enumeration value="41"/>
+            <xs:enumeration value="42"/>
+            <xs:enumeration value="43"/>
+            <xs:enumeration value="44"/>
+            <xs:enumeration value="45"/>
+            <xs:enumeration value="46"/>
+            <xs:enumeration value="47"/>
+            <xs:enumeration value="48"/>
+            <xs:enumeration value="49"/>
+            <xs:enumeration value="50"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <xs:simpleType name="sheel">
+        <xs:restriction base="xs:float">
+            <xs:enumeration value="0"/>
+            <xs:enumeration value="0.5"/>
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="1.5"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="2.5"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="3.5"/>
+            <xs:enumeration value="4"/>
+            <xs:enumeration value="4.5"/>
+            <xs:enumeration value="5"/>
+            <xs:enumeration value="5.5"/>
+            <xs:enumeration value="6"/>
+            <xs:enumeration value="6.5"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="sstorage">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Schuhschrank 1"/>
+            <xs:enumeration value="Schuhschrank 2"/>
+            <xs:enumeration value="Keller 1"/>
+            <xs:enumeration value="Keller 2"/>
+            <xs:enumeration value="Keller 3"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
+
